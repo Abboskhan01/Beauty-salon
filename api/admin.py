@@ -1,4 +1,4 @@
 from django.contrib import admin
 from django.apps import apps
 
-admin.register.site(apps.all_models['api'].values())
+admin.site.register(apps.all_models['api'].values())
