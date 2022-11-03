@@ -1,10 +1,10 @@
 from rest_framework import routers
-from .views import CosmeticSerializer, CategorySerializer
+from .views import CosmeticViewSet, CategoryViewSet
 from django.urls import path, include
 
 router = routers.DefaultRouter()
-router.register(r'cosmetic', CosmeticSerializer)
-router.register(r'category', CategorySerializer)
+router.register(r'cosmetic', CosmeticViewSet)
+router.register(r'category', CategoryViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
