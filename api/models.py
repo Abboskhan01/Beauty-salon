@@ -13,6 +13,7 @@ class Cosmetic(models.Model):
     description = models.TextField()
     image = models.ImageField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    salary = models.FloatField()
 
     def __str__(self):
         return self.name
