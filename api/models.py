@@ -11,7 +11,7 @@ class Category(models.Model):
 class Cosmetic(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='images', null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     salary = models.FloatField()
 
